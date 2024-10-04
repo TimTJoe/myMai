@@ -8,7 +8,7 @@ let menuitems = ["expense", "budget", "report"];
 let cur_path = window.location.href.split("/").pop();
 
 menuitems.forEach((text) => {
-  let item = text + ".htm";
+  let item = text + ".html";
   let a = document.createElement("a");
 
   a.classList.add("item");
