@@ -1,0 +1,53 @@
+.font.xl {
+	font-size: 2rem;
+	line-height: 1.49;
+}
+
+.font.md {
+	font-size: 1.3rem;
+}
+
+.font.xmd {
+	font-size: 1.7rem;
+}
+
+.font.sm {
+	font-size: medium;
+}
+
+.font.white {
+	color: var(--bright-white);
+}
+
+.font.error {
+	color: var(--red);
+}
+
+.font.success {
+	color: var(--green);
+}
+
+.font.error, .font.success {
+	padding: var(--space-sm);
+}
+
+.font.error, .font.success {
+	margin-bottom: var(--space-sm);
+	font-weight: bolder;
+	text-transform: capitalize;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: var(--blue);
+	text-transform: capitalize;
+}
+
+a:visited {
+	color: var(--blue);
+}
+
+a:hover {
+	text-decoration: underline;
+}

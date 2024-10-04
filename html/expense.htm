@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script type="module" src="../js/init.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body id="root">
+    <nav class="navigation" id="main_nav">
+      <a href="home.htm">
+        <img src="/images/logo_color.png" alt="logo" class="logo" />
+      </a>
+      <menu class="menu" id="menu_items">
+        <!-- menu items are programatically added-->
+      </menu>
+      <section class="actions">
+        <button type="icon" id="notificationBtn">
+          <img src="/images/bell.png" alt="" class="icon" />
+        </button>
+        <button type="icon" id="settingsBtn">
+          <img src="/images/cog.png" alt="" class="icon" />
+        </button>
+      </section>
+    </nav>
+    <main class="contents container">
+      <div class="intro">
+        <h1 class="greeting">Expense</h1>
+        <button class="cta" type="submit" id="open-dialog">
+          + New Expense
+        </button>
+      </div>
+      <div class="card-container flexbox">
+        <section class="card-section white-bground flexrow">
+          <h3 class="card-headline underline">Summary</h3>
+          <div class="card-content colbox">
+            <section class="card-summary blue-bground">
+              <h4 class="summary-headline">Total Expense</h4>
+              <h1 class="summary-number" id="expenseTotal">130,470</h1>
+            </section>
+            <section class="card-summary yellow-bground">
+              <h4 class="summary-headline">Budget Balance</h4>
+              <h1 class="summary-number" id="budgetBalance">130,470</h1>
+            </section>
+          </div>
+        </section>
+        <section class="card-section white-bground flexrow">
+          <h3 class="card-headline underline">Top Expenditures</h3>
+          <div class="card-content">
+              <canvas class="summary-graph" id="topExpenseGraph"></canvas>
+          </div>
+          <small class="card-note"></small>
+        </section>
+      </div>
+
+      <section class="tabular-container white-bground">
+        <header class="tabular-header underline flexbox">
+          <h3 class="tabular-headline">Recent Transactions</h3>
+        </header>
+        <div class="tabular-content" id="expense_blocks">
+        </div>
+      </section>
+      
+    </main>
+
+
+    <footer class="main_footer">
+      <div class="inner">&copy; myMai - By Timothy T. Joe</div>
+    </footer>
+
+    <div id="dialog" class="hidden">
+      <div class="container">
+        <header class="header">
+          <h3 class="title">Create New Expense</h3>
+          <button type="icon" id="close-dialog" class="icon">
+            <img src="/images/close_icon.svg" alt="" />
+          </button>
+        </header>
+        <form method="post" action="" id="add_expense_form" class="form">
+          <section class="content">
+
+            <fieldset class="fieldset">
+              <label class="label" for="expense_name">Expense Name</label>
+              <input
+            type="text"
+            placeholder="DSTV Billboard..."
+            id="expense_name"
+            required
+            minlength="4"
+          />
+            </fieldset>
+
+            <fieldset class="fieldset flexrow">
+              <section class="row rowcol">
+                <label class="label" for="expense_currency">Currency</label>
+                <select class="select" name="expense_currency" id="expense_currency">
+                  <option value="lrd">LRD</option>
+                  <option value="usd">USD</option>
+                </select>
+              </section>
+              <section class="row rowcol">
+                <label class="label" for="expense_cost">Cost</label>
+                <input
+                type="number"
+                id="expense_cost"
+                required
+                placeholder="$ 48.00"
+                />
+              </section>
+            </fieldset>
+
+            <fieldset class="fieldset flexrow">
+              <section class="row rowcol">
+                <label class="label" for="expense_category">Budget Category</label>
+                <select class="select" name="expense_category" id="expense_category">
+                  <!-- dynamically generated -->
+                </select>
+              </section>
+              <section class="row rowcol">
+                <label class="label" for="expense_date">Date</label>
+                <input
+                type="date"
+                id="expense_date"
+                required
+                />
+              </section>
+            </fieldset>
+
+          </section>
+          <footer class="footer">
+            <button type="submit" id="submit_expense_btn">Create Expense</button>
+            
+          </footer>
+        </form>
+    </div>
+
+     <div id="snackbar" class="hidden"></div>
+
+    <script type="module" src="/js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/js/expense/expense.js"></script>
+    <script type="module" src="/js/expense/charts.js"></script>
+    <script type="module" src="/js/expense/create.js"></script>
+  </body>
+</html>
+    

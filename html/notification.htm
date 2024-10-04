@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script type="module" src="../js/init.js"></script>
+    <title>Notifications - myMai</title>
+  </head>
+  <body id="root">
+    <nav class="navigation" id="main_nav">
+      <a href="home.htm">
+        <img src="/images/logo_color.png" alt="logo" class="logo" />
+      </a>
+      <menu class="menu" id="menu_items">
+        <!-- menu items are programatically added-->
+      </menu>
+      <section class="actions">
+        <button type="icon" id="notificationBtn">
+          <img src="/images/bell.png" alt="" class="icon" />
+        </button>
+        <button type="icon" id="settingsBtn">
+          <img src="/images/cog.png" alt="" class="icon" />
+        </button>
+      </section>
+    </nav>
+    <main class="contents container">
+      <div class="intro">
+        <h1 class="greeting">Notifications</h1>
+      </div>
+      <div class="tab-container" id="notificationContainer">
+        <section class="tab-section">
+          <section class="tab-body">
+            <h5 class="tab-tagline">2 min ago</h5>
+            <p class="tab-para">
+              <strong>Subscription</strong> monthly expenditure target exceeded
+            </p>
+          </section>
+          <button class="default small tab-button">Mark as read</button>
+        </section>
+        <section class="tab-section read">
+          <section class="tab-body">
+            <h5 class="tab-tagline">2 min ago</h5>
+            <p class="tab-para">
+              <strong>Subscription</strong> monthly expenditure target exceeded
+            </p>
+          </section>
+          <button class="default small tab-button">Mark as read</button>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/js/nav.js"></script>
+  </body>
+</html>

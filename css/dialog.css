@@ -1,0 +1,81 @@
+#dialog,
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#dialog.hidden,
+.dialog.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#dialog.visible,
+.dialog.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#dialog .container,
+.dialog .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#dialog .header,
+.dialog .header {
+    position: relative;
+    font-size: medium;
+    padding: var(--space-sm);
+    display: flex;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--light-gray);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dialog .content,
+.dialog .content {
+    padding: var(--space-sm);
+}
+
+#dialog .footer,
+.dialog .footer {
+    margin-top: auto;
+    padding: var(--space-sm);
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--light-gray);
+    gap: var(--space-sm);
+}
+
+#dialog .footer,
+.dialog .footer > button {
+    flex: 2;
+}
+
+
+
+#dialog form input,
+.dialog form input {
+    background-color: white;
+}
+
+#close-dialog,
+.close-dialog {
+    position: relative;
+    cursor: pointer;
+}

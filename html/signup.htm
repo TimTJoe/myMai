@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body class="row even" id="root">
+    <div class="item row bg-blue">
+      <img src="/images/logo.png" class="logo cell small" />
+      <section class="cell large">
+        <h1 class="font xl white">Manage Budgets.</h1>
+        <p class="font md white">
+          Set budgets , track expenses, analyze spending habits, & manage
+          personal finances in one place.
+        </p>
+      </section>
+    </div>
+    <form class="item column" method="post" id="reg_form">
+      <header class="header">
+        <h1 class="font xl">Create New Account</h1>
+      </header>
+      <main class="container">
+        <input
+          type="text"
+          placeholder="Full Name..."
+          id="fullname"
+          required
+          minlength="4"
+        />
+        <input
+          type="text"
+          placeholder="Username..."
+          id="username"
+          required
+          minlength="4"
+        />
+        <input
+          type="password"
+          placeholder="Password..."
+          id="password"
+          required
+          minlength="8"
+        />
+
+        <p class="msg error" id="error_msg"></p>
+        <p class="msg success" id="success_msg"></p>
+        <button type="submit" class="success">Create Account</button>
+      </main>
+
+      <footer class="footer">
+        <p class="para">
+          Already have an account?
+          <a href="/html/signin.htm"> Sign In</a>
+        </p>
+      </footer>
+    </form>
+    <script type="module" src="/js/signup.js"></script>
+  </body>
+</html>

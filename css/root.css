@@ -1,0 +1,190 @@
+:root {
+	/* COLORS */
+	--blue: #1877F2;
+	--dark-blue: rgb(13, 62, 107);
+	--light-blue: #80B3FF;
+	--saturated-blue: #0093FF;
+	--lavender-blue: #E9EDF0;
+	--sky-blue: #e3f2fd;
+
+	--green: #1DB954;
+	--dark-green: #033b3a;
+	--teal-green: rgb(24, 97, 91);
+	--light-green: #6EDF91;
+	--saturated-green: #00FF00;
+
+	--red: #FF0000;
+	--dark-red: #8B0000;
+	--light-red: #FF6347;
+	--saturated-red: #FF2400;
+	--bright-pink: #fc1b8b;
+
+	--lite-pink: rgb(255, 99, 132);
+	--lite-blue: rgb(54, 162, 235);
+	--lite-yellow: rgb(255, 205, 86);
+
+
+	--gray: #CCCCCC;
+	--dark-gray: #666666;
+	--light-gray: #E6E6E6;
+	--neutral-gray: #999999;
+	--xlite-gray: #EAEAEA;
+	--transparent-gray: rgba(243, 243, 243, 0.76);
+
+	--black: #000000;
+	--dark-black: rgba(0, 0, 0, 0.8);
+	--transparent-black: rgba(0, 0, 0, 0.5);
+	--warm-black: #2C2C2C;
+
+	--white: #FFFFFF;
+	--bright-white: #FFFFFF;
+	--transparent-white: rgba(255, 255, 255, 0.5);
+	--warm-white: #F5F5F5;
+
+
+	/* SPACES */
+	--space-xs: 8px;
+	--space-sm: 12px;
+	--space-md: 16px;
+	--space-lg: 24px;
+	--space-xl: 32px;
+
+	/* FONTS SIZES */
+	--font-size-xs: 12px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-lg: 18px;
+	--font-size-xl: 20px;
+
+	--background-image: url('../images/win_wal.jpg');
+	--blur-amount: 90px;
+	--blur-bground: rgba(0, 0, 0, 0.800);
+	--glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+	--gradient-pink: linear-gradient(to top, #c41768, #fc1b8c);
+	--gradient-green: linear-gradient(to bottom right, rgba(24, 138, 75, 0.63), #1DB954);
+	--gradient-white: linear-gradient(to bottom right, #f8f8f8, #faf9f9);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	overflow-wrap: break-word;
+	font-family: inherit;
+}
+
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	background-color: var(--lavender-blue);
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+
+body.centered {
+	display: grid;
+	place-items: center;
+	gap: var(--space-lg);
+}
+
+.logo {
+	width: 118px;
+}
+
+
+/* BACKGROUND COLORS */
+
+.bg-blue {
+	background-color: var(--blue);
+}
+
+main.contents {
+	width: 768px;
+	margin: auto;
+	border-top: solid var(--lavender-blue);
+}
+
+
+
+.contents .intro {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: var(--space-lg);
+	gap: var(--space-md);
+}
+
+.contents .intro .greeting {
+	flex: 2;
+
+}
+
+.contents .intro .cta {
+	max-width: 300px;
+	border-radius: 17px;
+}
+
+.main_footer {
+	padding: var(--space-lg);
+	background-color: var(--bright-white);
+	margin-top: var(--space-lg);
+}
+
+
+/* from expense details page */
+
+.contents .expense_details {
+	background-color: var(--bright-white);
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.contents .expense_details .head {
+	padding: var(--space-sm);
+	border-radius: unset;
+}
+
+.contents .expense_details .body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	padding: var(--space-sm);
+}
+
+.contents .expense_details .body .item {
+	border-radius: 8px;
+	background-color: var(--warm-white);
+	border: 1px solid var(--xlite-white);
+	padding: var(--space-md);
+	width: 100%;
+}
+
+.contents .expense_details .body .item h4 {
+	padding-bottom: var(--space-sm);
+	color: var(--dark-gray);
+}
+
+.contents .expense_details .foot {
+	display: flex;
+	padding: var(--space-md);
+	padding-top: unset;
+	gap: var(--space-md);
+	align-items: center;
+	justify-content: end;
+}
+
+.contents .expense_details .foot>* {
+	min-width: 170px;
+}
+
+
+@media screen and (max-width: 668px) {}

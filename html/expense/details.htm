@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body id="root">
+    <nav class="navigation" id="main_nav">
+      <a href="home.htm">
+        <img src="/images/logo_color.png" alt="logo" class="logo" />
+      </a>
+      <menu class="menu" id="menu_items">
+        <!-- menu items are programatically added-->
+      </menu>
+      <section class="actions">
+        <button type="icon" id="notificationBtn">
+          <img src="/images/bell.png" alt="" class="icon" />
+        </button>
+        <button type="icon">
+          <img src="/images/cog.png" alt="" class="icon" />
+        </button>
+      </section>
+    </nav>
+    <main class="contents container">
+      <div class="expense_details">
+        <header class="head">
+          <h2>Expense Details.</h2>
+        </header>
+        <div class="body " id="expenseBody">
+         <!-- JS WILL RENDER CONTENT HERE... -->
+        </div>
+        <footer class="foot">
+          <button class="primary" id="edit_expense_btn">Edit Expense</button>
+          <button class="warning" id="open_delete_expense">Delete</button>
+        </footer>
+      </div>
+    </main>
+
+    <footer class="main_footer">
+      <div class="inner">&copy; myMai - By Timothy T. Joe</div>
+    </footer>
+
+          <div id="delete_expense_dialog" class="dialog hidden">
+        <div class="container">
+          <header class="header">
+            <h3 class="title">Delete Expense</h3>
+            <button type="icon" id="close_delete_expense" class="dialog-close" class="icon">
+              <img src="/images/close_icon.svg" />
+            </button>
+          </header>
+          <section class="content">
+            <h1 class="font error">This action cannot be undone.</h1>
+          </section>
+          <footer class="footer">
+            <button  id="confirm_delete" class=" warning">Delete</button>
+            <button  id="cancel_delete" class=" primary">Cancel</button>
+          </footer>
+        </div>
+    </div>
+
+    <div id="edit_expense_dialog" class="dialog hidden">
+      <div class="container">
+        <header class="header">
+          <h3 class="title">Edit Expense Details</h3>
+          <button type="icon" id="close-dialog" class="icon">
+            <img src="/images/close_icon.svg" alt="" />
+          </button>
+        </header>
+        <form method="post" action="" id="edit_expense_form" class="form">
+          <section class="content">
+
+            <fieldset class="fieldset">
+              <label class="label" for="edit_name">Expense Name</label>
+              <input
+            type="text"
+            id="edit_name"
+            required
+            minlength="4"
+          />
+            </fieldset>
+
+            <fieldset class="fieldset flexrow">
+              <section class="row rowcol">
+                <label class="label" for="edit_currency">Currency</label>
+                <select class="select" name="edit_currency" id="edit_currency">
+                  <option value="lrd">LRD</option>
+                  <option value="usd">USD</option>
+                </select>
+              </section>
+              <section class="row rowcol">
+                <label class="label" for="edit_cost">Cost</label>
+                <input
+                type="text"
+                id="edit_cost"
+                required
+                />
+              </section>
+            </fieldset>
+
+            <fieldset class="fieldset flexrow">
+              <section class="row rowcol">
+                <label class="label" for="edit_category">Budget Category</label>
+                <select class="select edit_category" name="edit_category" id="edit_category">
+                  <option value="subscription">Subscription</option>
+                  <option value="entertainment">Entertainment</option>
+                  <option value="food">Food</option>
+                  <option value="utilities">Utilities</option>
+                  <option value="groceries">Groceries</option>
+                  <option value="drinks">Drinks</option>
+                </select>
+              </section>
+              <section class="row rowcol">
+                <label class="label" for="edit_date">Date</label>
+                <input
+                type="date"
+                id="edit_date"
+                required
+                />
+              </section>
+            </fieldset>
+
+          </section>
+          <footer class="footer">
+            <button type="submit" id="edit_submit_btn">Update Expense</button>
+          </footer>
+        </form>
+    </div>
+
+    <div id="snackbar" class="hidden"></div>
+
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/expense/details.js"></script>
+    <script type="module" src="/js/expense/edit.js"></script>
+    <script type="module" src="/js/expense/delete.js"></script>
+  </body>
+</html>

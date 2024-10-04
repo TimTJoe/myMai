@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script type="module" src="../js/init.js"></script>
+    <title>Budget</title>
+  </head>
+  <body id="root">
+    <nav class="navigation" id="main_nav">
+      <a href="home.htm">
+        <img src="/images/logo_color.png" alt="logo" class="logo" />
+      </a>
+      <menu class="menu" id="menu_items">
+        <!-- menu items are programatically added-->
+      </menu>
+      <section class="actions">
+        <button type="icon" id="notificationBtn">
+          <img src="/images/bell.png" alt="" class="icon" />
+        </button>
+        <button type="icon" id="settingsBtn">
+          <img src="/images/cog.png" alt="" class="icon" />
+        </button>
+      </section>
+    </nav>
+    <main class="contents container">
+     <div class="intro">
+        <h1 class="greeting">Budgets</h1>
+      </div>
+      <div class="card-container flexbox">
+        <div class="card-section white-bground" id="summary">
+          <section class="cta card-headline">
+            <button class="button primary" type="submit" id="open_dialog"> + Set New Budget</button>
+          </section>
+
+          <div class="card-table flexrow">
+            <h3 class="table-headline">Budget Summary</h3>
+            <section class="table-record flexbox">
+              <p class="record-text">Total Budget</p>
+              <strong class="record-text" id="budget_total"></strong>
+            </section>
+            <section class="table-record flexbox">
+              <p class="record-text">Total Expense</p>
+              <strong class="record-text" id="total_expense"></strong>
+            </section>
+            <section class="table-record flexbox">
+              <p class="record-text" >Balance</p>
+              <strong class="record-text" id="budget_balance"></strong>
+            </section>
+          </div>
+
+          <small class="card-note">
+            Budget Balance is Total Expense minus Total Budget.
+          </small>
+        
+        </div>
+          <section class="card-section white-bground flexrow" id="pie">
+          <h3 class="card-headline underline"> Top Budget Months</h3>
+          <div class="card-content">
+              <canvas class="summary-graph" id="expenditureChart"></canvas>
+          </div>
+          <small class="card-note"></small>
+        </section>
+      </div>
+
+      <section class="tabular-container white-bground">
+        <header class="tabular-header underline flexbox">
+          <h3 class="tabular-headline">Budget Category</h3>
+          <section class="switch-wrap">
+            <small>USD</small>
+            <label class="switch">
+                <input type="checkbox" checked id="currency_switch">
+                <span class="slider round"></span>
+            </label>
+            <small>LRD</small>
+          </section>
+        </header>
+        <div class="tabular-content" id="tbody">
+            <!--  added programmatically -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="main_footer">
+      <div class="inner">&copy; myMai - By Timothy T. Joe</div>
+    </footer>
+
+      <div id="set_budget_dialog" class="dialog hidden">
+      <div class="container">
+        <header class="header">
+          <h3 class="title">Set New Budget</h3>
+          <button type="icon" id="close_set_budget_dialog" class="icon">
+            <img src="/images/close_icon.svg" alt="" />
+          </button>
+        </header>
+        <form method="post" action="" id="set_budget_form" class="form">
+          <section class="content">
+
+            <fieldset class="fieldset">
+                <section class="row rowcol">
+                <label class="label" for="category">Category</label>
+                <select class="select stretch" name="category" id="category" required>
+                  <!-- dynamically generated -->
+                </select>
+              </section>
+            </fieldset>
+
+            <fieldset class="fieldset flexrow">
+              <section class="row rowcol">
+                <label class="label" for="currency">Currency</label>
+                <select class="select" name="currency" id="currency" required>
+                  <option value="lrd">LRD</option>
+                </select>
+              </section>
+              <section class="row rowcol">
+                <label class="label" for="month">Month</label>
+                <select class="select" name="month" id="month" required>
+                  <!--option tags are programattically added -->
+                </select>
+              </section>
+            </fieldset>
+
+              <fieldset class="fieldset">
+              <label class="label" for="amount">Budget Amount</label>
+              <input type="number" id="amount" name="amount" placeholder="10,000" required minlength="1">
+            </fieldset>
+
+          </section>
+          <footer class="footer">
+            <button type="submit" id="set_budget_btn">Set Budget</button>
+          </footer>
+        </form>
+    </div>
+
+    <div id="snackbar" class="hidden"></div>
+
+    <script type="module" src="/js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/js/budget/budget.js"></script>
+    <script type="module" src="/js/budget/chart.js"></script>
+    <script type="module" src="/js/budget/create.js"></script>
+  </body>
+</html>

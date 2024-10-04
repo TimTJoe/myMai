@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script type="module" src="../js/init.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body id="root">
+    <nav class="navigation" id="main_nav">
+      <a href="home.htm">
+        <img src="/images/logo_color.png" alt="logo" class="logo" />
+      </a>
+      <menu class="menu" id="menu_items">
+        <!-- menu items are programatically added-->
+      </menu>
+      <section class="actions">
+        <button type="icon" id="notificationBtn">
+          <img src="/images/bell.png" alt="" class="icon" />
+        </button>
+        <button type="icon" id="settingsBtn">
+          <img src="/images/cog.png" alt="" class="icon" />
+        </button>
+      </section>
+    </nav>
+    <main class="contents container">
+      <div class="intro">
+        <h1 class="greeting">Reports</h1>
+      </div>
+      <div class="chart-container">
+        <div class="chart-header flexrow">
+          <section class="chart-item">
+            <h4 class="chart-headline underline">Expense vs Budget Amounts</h4>
+            <section class="chart-body small">
+              <canvas class="summary-graph" id="reportSummary"></canvas>
+            </section>
+          </section>
+          <section class="chart-item">
+            <h4 class="chart-headline underline">Most Used Currency</h4>
+            <section class="chart-body small">
+              <canvas
+                class="summary-graph"
+                id="currencyCompare"
+                height="100"
+                width="100"
+              ></canvas>
+            </section>
+          </section>
+        </div>
+
+        <div class="chart-content">
+          <div class="chart-section">
+            <h4 class="chart-headline underline">Expense Per Month</h4>
+            <canvas
+              class="summary-graph"
+              id="monthlyExpense"
+              height="100"
+            ></canvas>
+          </div>
+          <div class="chart-section">
+            <h4 class="chart-headline underline">Top Budget Catgory</h4>
+            <canvas
+              class="summary-graph"
+              id="monthlyBudget"
+              height="100"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="main_footer">
+      <div class="inner">&copy; myMai - By Timothy T. Joe</div>
+    </footer>
+    <script type="module" src="/js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/js/report/charts/summary.js"></script>
+    <script type="module" src="/js/report/charts/currency.js"></script>
+    <script type="module" src="/js/report/charts/expense.js"></script>
+    <script type="module" src="/js/report/charts/budget.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bright-white);
+    padding: 8px var(--space-md);
+}
+
+.navigation .menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.navigation .menu .item {
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.navigation .menu .item:hover,
+.navigation .menu .item.active {
+    background-color: var(--light-gray);
+}
+
+.navigation .actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-container .dropdown-content {
+    position: absolute;
+    left: 50%;
+    width: 250px;
+    background-color: red;
+}

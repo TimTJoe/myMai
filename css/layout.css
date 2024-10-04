@@ -1,0 +1,25 @@
+.row {
+    display: flex;
+}
+
+.row.even>* {
+    flex: 2;
+    height: 100vh;
+    padding: var(--space-lg);
+}
+
+.item.row .small {
+    align-self: baseline;
+}
+
+.item.row .large {
+    align-self: center;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+
+}
