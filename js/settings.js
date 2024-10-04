@@ -2,12 +2,12 @@ import { getElement, ready, redirect } from "./utils.js";
 
 ready(() => {
   let settingURL = window.location.href.split("/").pop();
-  if (settingURL == "settings.htm") {
+  if (settingURL == "settings.html") {
     let signoutBtn = getElement("signoutBtn");
 
     signoutBtn.addEventListener("click", () => {
       window.localStorage.removeItem("login_data");
-      redirect("signin.htm");
+      redirect("signin.html");
     });
   } else {
     //do nothing
@@ -15,6 +15,6 @@ ready(() => {
 
   let settingsBtn = getElement("settingsBtn");
   settingsBtn.addEventListener("click", () => {
-    redirect("settings.htm");
+    redirect("settings.html");
   });
 });

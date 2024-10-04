@@ -5,6 +5,6 @@ ready(() => {
 
   let notificationBtn = getElement("notificationBtn");
   notificationBtn.addEventListener("click", () => {
-    redirect("notification.htm");
+    redirect("notification.html");
   });
 });

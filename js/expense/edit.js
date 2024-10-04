@@ -41,11 +41,11 @@ getElement("edit_expense_form").addEventListener("submit", (e) => {
   //update expense in localstorage
   window.localStorage.setItem("expenses", JSON.stringify(expenses));
   //redirect to view page and set state
-  setState(state, "expense/details.htm");
+  setState(state, "expense/details.html");
   showSnackbar("Expense Edited Successfully");
   setTimeout(() => {
     edit_expense_dialog.classList.remove("visible");
     edit_expense_dialog.classList.add("hidden");
-    redirect("expense/details.htm");
+    redirect("expense/details.html");
   }, 700);
 });

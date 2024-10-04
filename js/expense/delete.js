@@ -31,7 +31,7 @@ ready(() => {
     window.localStorage.setItem("expenses", JSON.stringify(updatedExpenses));
     showSnackbar("Expense Deleted");
     setTimeout(() => {
-      redirect("expense.htm");
+      redirect("expense.html");
     }, 600);
   });
 });

@@ -12,7 +12,7 @@ window.onload = () => {
   if (login_data !== null) {
     //do nothing
   } else {
-    redirect("/signin.htm");
+    redirect("/signin.html");
   }
 
   //load notification script
