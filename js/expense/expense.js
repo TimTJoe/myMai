@@ -39,7 +39,7 @@ export function renderExpenses() {
       blocks.insertAdjacentHTML("beforeend", block);
       document.getElementById(key).addEventListener("click", (e) => {
         setState(item.id, "expense/details.htm");
-        window.location.href = "/html/expense/details.htm";
+        window.location.href = "/expense/details.htm";
       });
     });
   } else {

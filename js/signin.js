@@ -21,7 +21,7 @@ getElement("signin_form").addEventListener("submit", (e) => {
     } else {
       success_tag.innerHTML = "Sign in successfully.";
       //redirect
-      location.href = "/html/budget.htm";
+      location.href = "/budget.htm";
     }
   } else {
     error_tag.innerHTML = "Username or password incorrect.";

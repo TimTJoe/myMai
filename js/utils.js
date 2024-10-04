@@ -23,11 +23,11 @@ export function setValue(elemeId, value) {
 }
 
 export function redirect(page) {
-  window.location.href = "/html/" + page;
+  window.location.href = "/" + page;
 }
 
 export function setState(state, url, name = null) {
-  history.pushState({ id: state }, { name: name }, `/html/${url}`);
+  history.pushState({ id: state }, { name: name }, `/${url}`);
 }
 
 export function getState() {

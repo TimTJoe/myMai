@@ -21,6 +21,6 @@ getElement("reg_form").addEventListener("submit", (e) => {
   } else {
     //redirect to signin
     success_msg.innerHTML = "Registration is successful";
-    location.href = "/html/signin.htm";
+    location.href = "/signin.htm";
   }
 });

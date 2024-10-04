@@ -18,7 +18,7 @@ menuitems.forEach((text) => {
     a.classList.add("active");
   }
 
-  a.href = "/html/" + item;
+  a.href = "/" + item;
   a.textContent = text;
   menu.appendChild(a);
 });

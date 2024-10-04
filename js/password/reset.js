@@ -18,7 +18,7 @@ getElement("reset_password_form").addEventListener("submit", (e) => {
     if (updatedItem.password === new_password) {
       error_tag.innerHTML = null;
       success_tag.innerHTML =
-        "Password reset sucessfully. <a href='/html/signin.htm'> Sign in</a>";
+        "Password reset sucessfully. <a href='/signin.htm'> Sign in</a>";
     } else {
       success_tag.innerHTML = null;
       error_tag.innerHTML = "Password reset fails. Please try again.";
